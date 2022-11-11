@@ -246,7 +246,7 @@ function psFetch($sku, $item) {
     data = JSON.stringify(data);
 
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "https://www.tiffosi.com/graphql/", true);
+    xhttp.open("POST", "https://www.domain.com/graphql/", true);
     xhttp.setRequestHeader("Content-Type", "application/json");
     xhttp.setRequestHeader("Store", lang);
     xhttp.send(data);
@@ -311,7 +311,7 @@ function psLoad($product, $item) {
     myEl.querySelector(".loading-spinner").remove();
 
     //Assign product info
-    myEl.href = "https://tiffosi.com/" + lang + "/" + $product['url_key'] + ".html";
+    myEl.href = "https://domain.com/" + lang + "/" + $product['url_key'] + ".html";
     myEl.querySelector("p.product-title").innerText = $product['name'];
     myEl.querySelector("p.product-price").innerText = $product.price_range.minimum_price.final_price['value'] + " \u20AC";
 
